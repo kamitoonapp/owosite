@@ -1,0 +1,18 @@
+@charset 'utf8';
+
+$primary: #111d2b;
+$secondary: #1e3147;
+$body-bg: $primary;
+$body-color: #fff;
+
+$card-color: #fff;
+$card-bg: $secondary;
+
+$link-color: rgb(199, 199, 199);
+
+$navbar-padding-x: 4rem;
+$navbar-padding-y: .2rem;
+
+@import 'bootstrap/scss/bootstrap.scss';
+@import 'bootstrap-vue/src/index.scss';
+@import './scss/hero.sass';

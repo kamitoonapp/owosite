@@ -1,0 +1,26 @@
+@import "./mixins.sass"
+
+.hero
+    align-items: stretch
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    &.k-small
+        .hero-body
+            padding: 1.5rem
+
+    &.k-medium
+        +tablet
+            .hero-body
+                padding: 9rem 1.5rem
+    
+    &.k-large
+        +tablet
+            .hero-body
+                padding: 18rem 1.5rem
+
+.hero-body
+    flex-grow: 1
+    flex-shrink: 0
+    padding: 10rem 1.5rem
