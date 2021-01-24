@@ -20,6 +20,7 @@
         <b-col cols="12">
           <b-row>
             <b-col v-for="(webtoon, index) of webtoons" :key="index" md="4" sm="6" lg="3" xl="2">
+              <NuxtLink :to="`/webtoons/${webtoon.id}`">
                 <b-card
                   :title="webtoon.name"
                   :img-src="`/example/${webtoon.preface}`"
@@ -27,13 +28,14 @@
                   img-top
                   tag="article"
                   style="max-width: 20rem;"
-                  class="mb-2"
+                  class="mb-2 selected"
                 >
                     <b-card-text>
                       <span style="font-variant: all-small-caps;">{{webtoon.genre.map((v) => type[v]).join(', ')}}</span>
                     </b-card-text>
 
                 </b-card>
+              </NuxtLink>
             </b-col>
           </b-row>
         </b-col>
@@ -73,18 +75,8 @@ export default {
     },
   },
   data() {
-    this.base = [
-        {name: 'isma', genre: ['k-0'], preface: '_a.png'},
-        {name: 'picu', genre: ['k-0'], preface: '_b.jpg'},
-        {name: 'yû', genre: ['k-0', 'k-1'], preface: '_c.png'},
-        {name: 'nico', genre: ['k-1'], preface: '_d.jpg'},
-        {name: 'Lorem', genre: ['k-0', 'k-1'], preface: '0.png'},
-        {name: 'ipsum', genre: ['k-0'], preface: '1.png'},
-        {name: 'dolor', genre: ['k-1'], preface: '2.jpg'},
-        {name: 'sit', genre: ['k-0', 'k-1'], preface: '3.jpg'},
-        {name: 'sitizen', genre: ['k-0'], preface: '4.png'},
-      ];
-
+    this.base = this.$store.state.webtoons;
+  
     return {
       order_selected: 1,
       order: [
@@ -101,7 +93,7 @@ export default {
 
       name: '',
 
-      webtoons: this.base.sort((a, b) => {
+      webtoons: this.base.map((v) => v).sort((a, b) => {
                 if(a.name.toLowerCase() < b.name.toLowerCase()) { return -1; }
                 if(a.name.toLowerCase() > b.name.toLowerCase()) { return 1; }
                 return 0;
@@ -117,7 +109,7 @@ export default {
   methods: {
     search() {
       // request
-      let copyBase = this.base
+      let copyBase = this.base.map((v) => v);
       if (this.genre_selected) {
           copyBase = copyBase.filter((wb) => wb.genre.includes(this.genre_selected));
       };
@@ -145,7 +137,3 @@ export default {
   },
 };
 </script>
-
-<style>
-
-</style>

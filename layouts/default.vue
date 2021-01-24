@@ -14,7 +14,7 @@
         <b-navbar-nav class="ml-auto">
 
           <b-nav-form>
-            <b-form-input size="sm" placeholder="Rechercher"></b-form-input>
+            <b-form-input size="sm" placeholder="🔎 Rechercher"></b-form-input>
           </b-nav-form>
 
           <b-button class="login-btn">Connexion</b-button>
@@ -55,6 +55,38 @@
     </footer>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    const author = {username: 'shaynlink', discriminitator: '0000', id: '45485418549594165', avatar: 'me.png'};
+
+    this.$store.commit('setWebtoons', [
+        {
+          name: 'isma',
+          genre: ['k-0'],
+          preface: '_a.png',
+          id: '15619801056159',
+          rate: 4.5,
+          like: Date.now(),
+          comments: [
+            {
+              author,
+              content: 'Hello world',
+              timestamp: Date.now(),
+              spoil: true,
+            },
+          ]
+        },
+    ]);
+
+    this.$store.commit('setUsers', [
+      author,
+    ]);
+    return {};
+  },
+};
+</script>
 
 <style>
 .login-btn {

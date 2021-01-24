@@ -3,9 +3,10 @@ export default {
   server: {
     port: 3000,
     host: '0.0.0.0',
+    timing: false,
   },
   head: {
-    title: 'anikami',
+    title: 'kamitoon',
     htmlAttrs: {
       lang: 'en'
     },
@@ -43,7 +44,8 @@ export default {
 
   bootstrapVue: {
     bootstrapCSS: false, // Or `css: false`
-    bootstrapVueCSS: false // Or `bvCSS: false`
+    bootstrapVueCSS: false, // Or `bvCSS: false`
+    icons: true,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

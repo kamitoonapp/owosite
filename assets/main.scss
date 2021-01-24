@@ -16,3 +16,12 @@ $navbar-padding-y: .2rem;
 @import 'bootstrap/scss/bootstrap.scss';
 @import 'bootstrap-vue/src/index.scss';
 @import './scss/hero.sass';
+
+.selected {
+    transition: transform .3s ease-out;
+}
+  
+.selected:hover {
+    transform: translate(0, -5px);
+    cursor: pointer;
+}
