@@ -20,7 +20,7 @@
         <b-col cols="12">
           <b-row>
             <b-col v-for="(webtoon, index) of webtoons" :key="index" md="4" sm="6" lg="3" xl="2">
-              <NuxtLink :to="`/webtoons/${webtoon.id}`">
+              <NuxtLink :to="`/webtoons/${webtoon.id}`" style="text-decoration: none;">
                 <b-card
                   :title="webtoon.name"
                   :img-src="`/example/${webtoon.preface}`"

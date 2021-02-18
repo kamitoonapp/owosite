@@ -19,9 +19,16 @@ $navbar-padding-y: .2rem;
 
 .selected {
     transition: transform .3s ease-out;
+    text-decoration: none;
 }
   
 .selected:hover {
     transform: translate(0, -5px);
     cursor: pointer;
+    text-decoration: none;
+}
+
+.bump {
+    width: 100%;
+    display: flex;
 }
