@@ -168,6 +168,7 @@ export default {
     logout() {
       jsCookie.remove('_token');
       this.$store.commit('setUser', null);
+      this.$router.push('/');
     },
   },
 };

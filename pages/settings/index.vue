@@ -44,7 +44,7 @@
                         <b-form-file accept="image/jpeg, image/png, image/gif" v-model="form.banner" placeholder="Choisissez une banniere ou déposez-le ici ..." drop-placeholder="Déposer le fichier ici ..." />
                     </b-col>
 
-                    <b-col cols="12" style="margin-top: 1.2rem">
+                    <b-col cols="12" style="margin-top: 1.2rem;margin-bottom: 1.2rem;">
                         <b-button variant="secondary" @click="onSend">Enregistrer</b-button>
                     </b-col>
                 </b-row>
