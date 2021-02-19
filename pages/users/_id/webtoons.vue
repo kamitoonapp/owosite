@@ -7,11 +7,15 @@
                 </div>
 
                 <div class="uw-webtoons">
-                    <b-card v-for="(webtoon, index) of webtoons" :key="index" :img-src="`/example/${webtoon.preface}`" img-width="60" img-left class="mb-3">
-                        <b-card-text >
-                            <nuxt-link :to="`/webtoons/${webtoon.id}`">{{webtoon.name}}</nuxt-link>
-                        </b-card-text>
-                    </b-card>
+                    <div v-for="(webtoon, index) of webtoons" :key="index" class="selected">
+                        <nuxt-link :to="`/webtoons/${webtoon.id}`" style="text-decoration: none;">
+                            <b-card  :img-src="`/example/${webtoon.preface}`" img-width="60" img-left class="mb-3">
+                                <b-card-text>
+                                    {{webtoon.name}}
+                                </b-card-text>
+                            </b-card>
+                        </nuxt-link>
+                    </div>
                 </div>
             </div>
             <div class="uw-mywebtoon">
@@ -20,11 +24,15 @@
                 </div>
 
                 <div class="uw-subscribes">
-                    <b-card v-for="(subscribe, index) of subscribes" :key="index" :img-src="`/example/${subscribe.preface}`" img-width="60" img-left class="mb-3">
-                        <b-card-text >
-                            <nuxt-link :to="`/webtoons/${subscribe.id}`">{{subscribe.name}}</nuxt-link>
-                        </b-card-text>
-                    </b-card>
+                    <div v-for="(subscribe, index) of subscribes" :key="index" class="selected">
+                        <nuxt-link :to="`/webtoons/${subscribe.id}`" style="text-decoration: none;">
+                            <b-card :img-src="`/example/${subscribe.preface}`" img-width="60" img-left class="mb-3">
+                                <b-card-text>
+                                    {{subscribe.name}}
+                                </b-card-text>
+                            </b-card>
+                        </nuxt-link>
+                    </div>
                 </div>
             </div>
       </section>

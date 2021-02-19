@@ -102,6 +102,7 @@ export default {
               comments,
               chapters: [
                 {
+                  id: '15616',
                   name: 'Ok MEC',
                   preface: '_a.png',
                   images: ['001.jpg', '002.jpg', '003.jpg', '004.jpg', '005.jpg', '006.jpg', '007.jpg'],
@@ -109,6 +110,7 @@ export default {
                   like: Date.now(),
                 },
                 {
+                  id: '487418',
                   name: 'AaAaAaAa',
                   preface: '_b.jpg',
                   images: ['001.jpg', '002.jpg', '003.jpg', '004.jpg', '005.jpg', '006.jpg', '007.jpg'],
@@ -125,6 +127,7 @@ export default {
               comments,
               chapters: [
                 {
+                  id: '4511',
                   name: 'tic tac toe',
                   preface: '_c.png',
                   images: ['001.jpg', '002.jpg', '003.jpg', '004.jpg', '005.jpg', '006.jpg', '007.jpg'],
@@ -132,6 +135,7 @@ export default {
                   like: 548648651,
                 },
                 {
+                  id: '47411415471',
                   name: 'tok te',
                   preface: '_d.jpg',
                   images: ['001.jpg', '002.jpg', '003.jpg', '004.jpg', '005.jpg', '006.jpg', '007.jpg'],
@@ -139,6 +143,7 @@ export default {
                   like: 516,
                 },
                 {
+                  id: '41514',
                   name: 'hohi',
                   preface: '0.png',
                   images: ['001.jpg', '002.jpg', '003.jpg', '004.jpg', '005.jpg', '006.jpg', '007.jpg'],

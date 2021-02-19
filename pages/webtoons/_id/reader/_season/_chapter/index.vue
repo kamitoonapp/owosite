@@ -23,7 +23,7 @@
       <div class="view-navigation">
         <b-button v-if="getPrev" class="view-btn" :to="getPrev">Précédent</b-button>
         <h5>ep. {{$route.params.chapter}}</h5>
-        <b-button v-if="getNext" class="view-btn">Suivant</b-button>
+        <b-button v-if="getNext" class="view-btn" :to="getNext">Suivant</b-button>
       </div>
     </section>
   </div>
