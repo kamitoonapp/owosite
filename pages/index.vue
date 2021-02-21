@@ -103,9 +103,9 @@
                         <b-card img-src="/example/0.png" img-left img-width="100" class="webtoon-card selected">
                         <div style="display: flex;justify-content: space-between">
                           <b-card-text>
-                            <span style="font-size: x-large;">dolor (true card)</span>
+                            <span style="font-size: x-large;">Hey (true card)</span>
                             <br />
-                            <div style="display: flex;column-gap: 1rem;">
+                            <div class="k-card-items">
                               <div>
                                 24 <font-awesome-icon icon="thumbs-up" style="color: cornflowerblue" />
                               </div>
@@ -127,7 +127,7 @@
                           <b-card-text>
                             <span style="font-size: x-large;">dolor (true card)</span>
                             <br />
-                            <div style="display: flex;column-gap: 1rem;">
+                            <div class="k-card-items">
                               <div>
                                 2M <font-awesome-icon icon="thumbs-up" style="color: cornflowerblue" />
                               </div>
@@ -144,12 +144,12 @@
                         </b-card>
                       </b-col>
                       <b-col xl="4" md="6">
-                        <b-card img-src="/example/2.jpg" img-left img-width="120" class="webtoon-card selected">
+                        <b-card img-src="/example/2.jpg" img-left img-width="100" class="webtoon-card selected">
                         <div style="display: flex;justify-content: space-between">
                           <b-card-text>
                             <span style="font-size: x-large;">dolor (true card)</span>
                             <br />
-                            <div style="display: flex;column-gap: 1rem;">
+                            <div class="k-card-items">
                               <div>
                                 6.12k <font-awesome-icon icon="thumbs-up" style="color: cornflowerblue" />
                               </div>
@@ -171,7 +171,7 @@
                           <b-card-text>
                             <span style="font-size: x-large;">dolor (true card)</span>
                             <br />
-                            <div style="display: flex;column-gap: 1rem;">
+                            <div class="k-card-items">
                               <div>
                                 50k <font-awesome-icon icon="thumbs-up" style="color: cornflowerblue" />
                               </div>
@@ -193,7 +193,7 @@
                           <b-card-text>
                             <span style="font-size: x-large;">dolor (true card)</span>
                             <br />
-                            <div style="display: flex;column-gap: 1rem;">
+                            <div class="k-card-items">
                               <div>
                                 0 <font-awesome-icon icon="thumbs-up" style="color: cornflowerblue" />
                               </div>
@@ -318,12 +318,6 @@ export default {
   margin-bottom: 1rem;
 }
 
-@media (max-width: 768px) {
-  .k-pub {
-    display: none;
-  }
-}
-
 .k-slides {
   min-width: 100%;
 }
@@ -407,6 +401,23 @@ export default {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+.k-card-items {
+  display: flex;
+  column-gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .k-pub {
+    display: none;
+  }
+  .k-card-items {
+    display: grid;
+  }
+  .webtoon-card {
+    height: 10rem;
   }
 }
 </style>
