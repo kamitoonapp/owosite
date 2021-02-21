@@ -7,6 +7,7 @@ import {
     faStar,
     faThumbsUp,
     faTrashAlt,
+    faPlusCircle,
 } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faDiscord, faInstagram, faPinterest, faYoutube, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
@@ -27,6 +28,7 @@ library.add(
     faThumbsUp,
     faTrashAlt,
     faTimesCircle,
+    faPlusCircle,
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)

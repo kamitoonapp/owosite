@@ -27,7 +27,7 @@
     <div class="k-slides">
 
       <div class="k-slides-content">
-        <div v-for="(slide, index) of slides" :key="index" class="k-slide">
+        <div v-for="(slide, index) of slides" :key="index" class="k-fade k-slide">
           <img :src="slide.url" />
         </div>
 
@@ -101,32 +101,112 @@
                     <b-row>
                       <b-col xl="4" md="6">
                         <b-card img-src="/example/0.png" img-left img-width="100" class="webtoon-card selected">
-                          <b-card-text><span style="font-size: x-large;">Lorem</span></b-card-text>
-
+                        <div style="display: flex;justify-content: space-between">
+                          <b-card-text>
+                            <span style="font-size: x-large;">dolor (true card)</span>
+                            <br />
+                            <div style="display: flex;column-gap: 1rem;">
+                              <div>
+                                24 <font-awesome-icon icon="thumbs-up" style="color: cornflowerblue" />
+                              </div>
+                              <div>
+                                <b-badge variant="success">Romance</b-badge>
+                                <b-badge variant="danger">OPPAI !</b-badge>
+                              </div>
+                            </div>
+                          </b-card-text>
+                          <div>
+                            <b-badge variant="warning" style="margin-right: -36px;" class="k-new-badge">New !</b-badge>
+                          </div>
+                        </div>
                         </b-card>
                       </b-col>
                       <b-col xl="4" md="6">
                         <b-card img-src="/example/1.png" img-left img-width="100" class="webtoon-card selected">
-                          <b-card-text><span style="font-size: x-large;">ipsum</span></b-card-text>
-
+                        <div style="display: flex;justify-content: space-between">
+                          <b-card-text>
+                            <span style="font-size: x-large;">dolor (true card)</span>
+                            <br />
+                            <div style="display: flex;column-gap: 1rem;">
+                              <div>
+                                2M <font-awesome-icon icon="thumbs-up" style="color: cornflowerblue" />
+                              </div>
+                              <div>
+                                <b-badge variant="success">Romance</b-badge>
+                                <b-badge variant="danger">OPPAI !</b-badge>
+                              </div>
+                            </div>
+                          </b-card-text>
+                          <div>
+                            <b-badge variant="warning" style="margin-right: -36px;" class="k-new-badge">New !</b-badge>
+                          </div>
+                        </div>
                         </b-card>
                       </b-col>
                       <b-col xl="4" md="6">
-                        <b-card img-src="/example/2.jpg" img-left img-width="100" class="webtoon-card selected">
-                          <b-card-text><span style="font-size: x-large;">dolor</span></b-card-text>
-
+                        <b-card img-src="/example/2.jpg" img-left img-width="120" class="webtoon-card selected">
+                        <div style="display: flex;justify-content: space-between">
+                          <b-card-text>
+                            <span style="font-size: x-large;">dolor (true card)</span>
+                            <br />
+                            <div style="display: flex;column-gap: 1rem;">
+                              <div>
+                                6.12k <font-awesome-icon icon="thumbs-up" style="color: cornflowerblue" />
+                              </div>
+                              <div>
+                                <b-badge variant="success">Romance</b-badge>
+                                <b-badge variant="danger">OPPAI !</b-badge>
+                              </div>
+                            </div>
+                          </b-card-text>
+                          <div>
+                            <b-badge variant="warning" style="margin-right: -36px;" class="k-new-badge">New !</b-badge>
+                          </div>
+                        </div>
                         </b-card>
                       </b-col>
                       <b-col xl="4" md="6">
                         <b-card img-src="/example/3.jpg" img-left img-width="100" class="webtoon-card selected">
-                          <b-card-text><span style="font-size: x-large;">sit</span></b-card-text>
-
+                        <div style="display: flex;justify-content: space-between">
+                          <b-card-text>
+                            <span style="font-size: x-large;">dolor (true card)</span>
+                            <br />
+                            <div style="display: flex;column-gap: 1rem;">
+                              <div>
+                                50k <font-awesome-icon icon="thumbs-up" style="color: cornflowerblue" />
+                              </div>
+                              <div>
+                                <b-badge variant="success">Romance</b-badge>
+                                <b-badge variant="danger">OPPAI !</b-badge>
+                              </div>
+                            </div>
+                          </b-card-text>
+                          <div>
+                            <b-badge variant="warning" style="margin-right: -36px;" class="k-new-badge">New !</b-badge>
+                          </div>
+                        </div>
                         </b-card>
                       </b-col>
                       <b-col xl="4" md="6">
                         <b-card img-src="/example/4.png" img-left img-width="100" class="webtoon-card selected">
-                          <b-card-text><span style="font-size: x-large;">sitizen</span></b-card-text>
-
+                        <div style="display: flex;justify-content: space-between">
+                          <b-card-text>
+                            <span style="font-size: x-large;">dolor (true card)</span>
+                            <br />
+                            <div style="display: flex;column-gap: 1rem;">
+                              <div>
+                                0 <font-awesome-icon icon="thumbs-up" style="color: cornflowerblue" />
+                              </div>
+                              <div>
+                                <b-badge variant="success">Romance</b-badge>
+                                <b-badge variant="danger">OPPAI !</b-badge>
+                              </div>
+                            </div>
+                          </b-card-text>
+                          <div>
+                            <b-badge variant="warning" style="margin-right: -36px;" class="k-new-badge">New !</b-badge>
+                          </div>
+                        </div>
                         </b-card>
                       </b-col>
                     </b-row>
@@ -205,14 +285,14 @@ export default {
 
     next.onclick = () => {
       index = nextIndex();
-      slides.item(backIndex()).className = 'k-slide';
+      slides.item(backIndex()).className = 'k-fade k-slide';
       showSlide(index);
       clearInterval(window.autoSlide);
     };
 
     back.onclick = () => {
       console.log('back');
-      slides.item(index).className = 'k-slide';
+      slides.item(index).className = 'k-fade k-slide';
       index = backIndex();
       showSlide(index);
       clearInterval(window.autoSlide);
@@ -290,21 +370,43 @@ export default {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/*
+
 .k-fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: .4s;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: .4s;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4;}
+  from {opacity: .3;}
   to {opacity: 1;}
 }
 
 @keyframes fade {
-  from {opacity: .5;}
+  from {opacity: .3;}
   to {opacity: 1;}
-}*/
+}
+
+.k-new-badge {
+  animation: float 2s linear infinite;
+}
+
+@keyframes float{
+  0% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  90% {
+    transform: translateY(-1px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 </style>

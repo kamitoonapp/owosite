@@ -18,16 +18,12 @@
             <b-form-input size="sm" placeholder="🔎 Rechercher" style="width: 100%" />
           </b-nav-form>-->
 
-          <div v-if="!$store.state.user">
-            <b-button class="login-btn" to="/login">Connexion</b-button>
-          </div>
-
-          <div v-else>
+          <div v-if="user">
             <b-nav-item-dropdown size="lg" variant="link" toggle-class="text-decoration-none" no-caret>
               <template #button-content>
                 <div class="nav-login">
-                  <div class="avatar-elipse" :style="`background: url('/example/${$store.state.user.avatar}') center center no-repeat; background-size: cover;`" />
-                  <div style="font-family: -webkit-pictograph;font-size: large;">{{$store.state.user.username}}</div>
+                  <div class="avatar-elipse" :style="`background: url('/example/${user.avatar}') center center no-repeat; background-size: cover;`" />
+                  <div style="font-family: -webkit-pictograph;font-size: large;">{{user.username}}</div>
                 </div>
               </template>
               <b-dropdown-item to="/users/@me">Profil</b-dropdown-item>
@@ -36,6 +32,10 @@
               <b-dropdown-divider />
               <b-dropdown-item @click="logout">Deconnexion</b-dropdown-item>
             </b-nav-item-dropdown>
+          </div>
+
+          <div v-else>
+            <b-button class="login-btn" to="/login">Connexion</b-button>
           </div>
 
         </b-navbar-nav>
@@ -174,6 +174,11 @@ export default {
       jsCookie.remove('_token');
       this.$store.commit('setUser', null);
       this.$router.push('/');
+    },
+  },
+  computed: {
+    user() {
+      return this.$store.state.user;
     },
   },
 };

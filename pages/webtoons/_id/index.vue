@@ -30,8 +30,8 @@
                 </b-row>
                 <hr style="background-color: rgb(134 134 134)" />
                 <b-row>
-                    <b-col xl="3" lg="4" md="5" style="margin-bottom: 2%">
-                        <label for="category"></label>
+                    <b-col xl="4" lg="5" md="6" style="margin-bottom: 2%;">
+                        <label for="category" />
                         <b-form-select v-model="view">
                             <template #first>
                                 <b-form-select-option :value="null" disabled>-- Sélectionner une categorie --</b-form-select-option>
@@ -56,7 +56,7 @@
                                                 <br>
                                                 {{chapter.like}} <font-awesome-icon icon="thumbs-up" style="color: cornflowerblue" />
                                             </div>
-                                            <div>
+                                            <div v-if="isAuthor">
                                                 <font-awesome-icon icon="trash-alt" class="k-trash" @click="trash(chapter)" />
                                             </div>
                                         </div>
